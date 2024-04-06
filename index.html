@@ -29,19 +29,19 @@
             </div>
 
             <ul class="nav-items">
-                <a href="">
+                <a href="#home-sec">
                     <li><i class="fa-solid fa-house"></i>Home</li>
                 </a>
-                <a href="">
+                <a href="#works-sec">
                     <li><i class="fa-solid fa-code-branch"></i>Works</li>
                 </a>
-                <a href="">
+                <a href="#services-sec">
                     <li><i class="fa-solid fa-bell-concierge"></i>Services</li>
                 </a>
-                <a href="">
+                <a href="#aptmnt-sec">
                     <li><i class="fa-solid fa-pen"></i>Appointment</li>
                 </a>
-                <a href="">
+                <a href="#contact-sec">
                     <li><i class="fa-solid fa-phone"></i>Contact</li>
                 </a>
             </ul>
@@ -51,10 +51,12 @@
             <h1>Snehesh Thattil</h1>
             <p><strong>Software Developer</strong></p>
         </div>
-        <div class="photo">
+        <div class="photo" id="home-sec">
             <div class="content">
                 <div class="layer">
                     <img src="/Resources/Snehesh Thattil circle.png" alt="Snehesh Thattil">
+                    <p>Fullstack Developer</p>
+                    <button>Hire Now</button>
                 </div>
                 <i class="node">Node.js</i>
                 <i class="express">Express.js</i>
@@ -65,14 +67,14 @@
             </div>
         </div>
         <!-- Service Section -->
-        <div class="whySection">
+        <div class="whySection" id="services-sec">
 
         </div>
-        <div class="works">
+        <div class="works" id="works-sec">
 
         </div>
         <!-- Contact Section -->
-        <div class="aptmnt">
+        <div class="aptmnt" id="aptmnt-sec">
             <div class="header">
                 <h3>Appointment</h3>
             </div>
@@ -80,13 +82,14 @@
                 <form action="">
                     <input type="text" name="Name" id="name" placeholder="Enter Your Name">
                     <input type="email" name="Email" id="email" placeholder="Enter Your Email Address">
-                    <textarea name="Message" id="formMsg" cols="1" rows="5" placeholder="Explain what you are looking for"></textarea>
+                    <textarea name="Message" id="formMsg" cols="1" rows="5"
+                        placeholder="Explain what you are looking for"></textarea>
 
                     <button class="sbt-btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <div class="cnt-info">
+        <div class="cnt-info" id="contact-sec">
             <div class="header">
                 <h3>Contact Info</h3>
             </div>
@@ -95,20 +98,25 @@
                     perspiciatis labore debitis, sequi placeat praesentium nemo earum beatae, fugit ducimus modi
                     laudantium voluptatem sed velit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
                     placeat, natus perspiciatis sit eius tenetur porro voluptatem ipsum quidem blanditiis laborum
-                    eveniet
-                    aut saepe beatae, nulla quasi nostrum, et quam</p>
-                <p><span>Email </span>sneheshthattil75@gmail.com</p>
-                <p><span>Whatsapp </span>6235902137</p>
+                    evenietaut saepe beatae, nulla quasi nostrum, et quam</p>
+                <div class="opts">
+                    <p>Email :<span>sneheshthattil75@gmail.com</span></p>
+                    <p>Mobile :<span>6235902137</span></p>
+                    <p>Whatsapp :<span>6235902137</span></p>
+                </div>
             </div>
         </div>
 
         <!-- Footer Section -->
         <footer>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <h5>Follow me on</h5>
+            <div class="slinks">
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </footer>
 
         <script src="script.js"></script>
