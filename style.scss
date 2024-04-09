@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Yeseva One";
 }
 
 .container {
@@ -26,7 +26,7 @@ body {
     grid-template-areas:
         "Head       Head"
         "Title      Photo"
-        "WhySection Works"
+        "Reviews    Works"
         "Aptmnt     Contact"
         "Footer     Footer";
 
@@ -104,6 +104,7 @@ body {
                     content: "";
                     width: 100%;
                     height: .15em;
+                    border-radius: 70%;
                     position: absolute;
                     left: 5px;
                     bottom: 0;
@@ -165,46 +166,6 @@ body {
         .content {
             position: relative;
 
-            i {
-                position: absolute;
-                padding: .75rem 1rem;
-                color: rgb(24, 22, 22);
-                background-color: white;
-                border-radius: 30px;
-                font-weight: bold;
-                z-index: 2;
-            }
-
-            .bootstrap {
-                top: -2rem;
-                right: -2rem;
-            }
-
-            .mongo {
-                top: -2rem;
-                left: -2rem;
-            }
-
-            .node {
-                bottom: -1rem;
-                left: -3rem;
-            }
-
-            .express {
-                bottom: -2.5rem;
-                right: -3rem;
-            }
-
-            .react {
-                top: 50%;
-                right: -6.5rem;
-            }
-
-            .css {
-                bottom: 50%;
-                left: -5rem;
-            }
-
             .layer {
                 width: 16rem;
                 height: 16rem;
@@ -229,7 +190,7 @@ body {
 
                 &::after {
                     content: "";
-                    background-color: white;
+                    background-color: rgb(226, 226, 226);
                     position: absolute;
                     width: 15rem;
                     height: 15rem;
@@ -276,6 +237,7 @@ body {
                     outline: none;
                     border: none;
                     font-weight: bold;
+                    cursor: pointer;
                     transition: .5s ease;
 
                     &:hover {
@@ -285,20 +247,163 @@ body {
                     }
                 }
             }
+
+            .icons {
+                display: flex;
+                position: absolute;
+                padding: .75rem 1rem;
+                color: rgb(24, 22, 22);
+                background-color: white;
+                border-radius: 7.5px;
+                font-weight: bold;
+                z-index: 2;
+
+                i {
+                    padding: 0 10px;
+                    scale: 1.5;
+                }
+            }
+
+            .bootstrap {
+                top: -2.7rem;
+                right: -2.5rem;
+            }
+
+            .express {
+                top: -2.3rem;
+                left: -4rem;
+            }
+
+            .node {
+                bottom: -2rem;
+                left: -3rem;
+            }
+
+            .mongo {
+                bottom: -2rem;
+                right: -5rem;
+            }
+
+            .css {
+                bottom: 45%;
+                right: -6.1rem;
+            }
+
+            .react {
+                top: 45%;
+                left: -8rem;
+            }
+
         }
     }
 
-    .whySection {
-        grid-area: WhySection;
+    .reviews {
+        grid-area: Reviews;
         background: linear-gradient(to top, rgb(51, 49, 49), black);
     }
 
     .works {
         grid-area: Works;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
         background: linear-gradient(to bottom, rgb(51, 49, 49), black);
         box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(3, 3, 3, 0.253);
         z-index: 1;
+
+        h3 {
+            color: white;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 75%;
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+
+                    .card {
+                        width: 17.5rem;
+                        height: 25rem;
+                        padding: 20px;
+                        border-radius: 10px;
+                        background-color: white;
+
+                        .img {
+                            height: 40%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        .description {
+                            width: 100%;
+                            height: 60%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: center;
+                            text-align: justify;
+                            color: black;
+
+                            h3 {
+                                color: black;
+                            }
+
+                            .github {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: black;
+                                text-align: center;
+                                padding: 4px;
+                                width: 100%;
+                                border-radius: 2px;
+
+                                p {
+                                    color: white;
+                                    padding: 5px;
+                                    border-radius: 10px;
+                                }
+
+                                i {
+                                    color: white;
+                                    scale: 1.4;
+                                    margin: 0 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination-bullet {
+                background-color: white;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                scale: .4;
+                width: 3rem;
+                height: 3rem;
+                padding: 50px;
+                background-color: white;
+                color: black;
+                border-radius: 50%;
+                transition: .25s ease-in-out;
+
+                &:hover {
+                    background-color: rgb(230, 221, 221);
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 
     .aptmnt {
@@ -341,6 +446,7 @@ body {
                     outline: none;
                     border-radius: 5px;
                     padding: 0 1rem;
+                    resize: none;
                 }
 
                 #formMsg {
@@ -452,17 +558,105 @@ body {
     }
 }
 
+// Tablet Screen
+@media(min-width:769px) and (max-width:1024px) {
+    .container {
+        grid-template-rows: 4rem 37.5rem 37.5rem 35rem 8rem;
+
+        nav {
+            grid-area: Head;
+            height: 4rem;
+
+            .nav-items {
+                a {
+                    &::before {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .logo {
+                a {
+                    img {
+                        width: 1.75rem;
+                        height: 1.75rem;
+                    }
+
+                    h3 {
+                        font-size: x-large;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .photo {
+            grid-area: Photo;
+            overflow: hidden;
+        }
+
+        .works {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .card {
+                            scale: .75;
+                        }
+                    }
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    &:hover {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+
+        .aptmnt {
+            padding: 2rem 3rem;
+
+            .header {
+                margin: 1rem 0;
+            }
+        }
+
+        .cnt-info {
+            padding: 2rem 3rem;
+
+            .content {
+                .opts {
+                    font-size: 15px;
+
+                    p {
+                        span {
+                            &:hover {
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
 // Mobile Screen
 @media(max-width:768px) {
     .container {
         grid-template-columns: 100%;
-        grid-template-rows: 4rem 25rem 15rem 20rem 20rem 27.5rem 30rem 8rem;
+        grid-template-rows: 4rem 25rem 15rem 20rem 35rem 27.5rem 30rem 8rem;
         grid-template-areas:
             "Head"
             "Photo"
             "Title"
             "Services"
-            "Services"
+            "Works"
             "Aptmnt"
             "Contact"
             "Footer";
@@ -537,30 +731,66 @@ body {
 
         .photo {
             grid-area: Photo;
+            position: relative;
 
             .content {
-                i {
-                    display: none;
+                position: unset;
+
+                .icons {
+                    p {
+                        display: none;
+                    }
+                }
+
+                .bootstrap {
+                    top: 2rem;
+                    right: 3rem;
+                }
+
+                .express {
+                    top: 2rem;
+                    left: 3rem;
                 }
 
                 .node {
-                    bottom: -1.5rem;
-                    left: -2.5rem;
+                    bottom: 2rem;
+                    left: 3rem;
                 }
 
-                .react {
-                    top: 38%;
-                    right: -5rem;
+                .mongo {
+                    bottom: 2rem;
+                    right: 3rem;
                 }
 
                 .css {
                     bottom: 45%;
-                    left: -5rem;
+                    right: 1rem;
                 }
 
-                .express {
-                    bottom: -1rem;
-                    right: -4rem;
+                .react {
+                    top: 45%;
+                    left: 1rem;
+                }
+            }
+        }
+
+        .works {
+            background: linear-gradient(to top, rgb(51, 49, 49), black);
+
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .card {
+                            scale: .75;
+                        }
+                    }
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    &:hover {
+                        transform: rotate(0);
+                    }
                 }
             }
         }
@@ -578,70 +808,12 @@ body {
 
             .content {
                 .opts {
-                    font-size: 14px;
+                    font-size: 13px;
 
                     p {
                         span {
                             &:hover {
                                 letter-spacing: .5px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .header {
-                margin: 1rem 0;
-            }
-        }
-    }
-}
-
-// Tablet Screen
-@media(min-width:769px) and (max-width:1023px) {
-    .container {
-        grid-template-rows: 5vh 45vh 50vh 40vh 10vh;
-
-        nav {
-            .logo {
-                a {
-                    img {
-                        width: 1.75rem;
-                        height: 1.75rem;
-                    }
-
-                    h3 {
-                        font-size: x-large;
-                        color: white;
-                    }
-                }
-            }
-        }
-
-        .photo {
-            grid-area: Photo;
-            overflow: hidden;
-        }
-
-        .aptmnt {
-            padding: 2rem 3rem;
-
-            .header {
-                margin: 1rem 0;
-            }
-        }
-
-        .cnt-info {
-            padding: 2rem 3rem;
-
-            .content {
-                .opts {
-                    font-size: 15px;
-
-                    p {
-                        span {
-                            &:hover {
-                                letter-spacing: 1px;
                             }
                         }
                     }
