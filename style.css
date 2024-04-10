@@ -30,13 +30,13 @@ body {
   padding: 0 5rem;
   background-color: black;
   z-index: 50;
-  position: fixed;
   width: 100%;
   height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  transition: position 0.25s;
 }
 .container nav .toggler {
   display: none;
@@ -251,7 +251,80 @@ body {
 }
 .container .reviews {
   grid-area: Reviews;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   background: linear-gradient(to top, rgb(51, 49, 49), black);
+}
+.container .reviews h3 {
+  color: white;
+}
+.container .reviews .content {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox {
+  width: 15rem;
+  height: 17.5rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h3 {
+  color: black;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h6 {
+  margin-bottom: 10px;
+  transform: translateX(30px);
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review {
+  color: white;
+  background-color: rgb(46, 43, 43);
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review .fakediv {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 2px;
+  background-color: rgb(46, 43, 43);
+  transform: rotate(45deg);
+  top: -0.5rem;
+  right: 1.5rem;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review p {
+  font-family: "sans serif";
+  font-weight: normal;
+  text-align: justify;
+}
+.container .reviews .content .swiper .swiper-pagination-bullet {
+  background-color: white;
+}
+.container .reviews .content .swiper .swiper-button-prev,
+.container .reviews .content .swiper .swiper-button-next {
+  scale: 0.4;
+  width: 3rem;
+  height: 3rem;
+  padding: 50px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+.container .reviews .content .swiper .swiper-button-prev:hover,
+.container .reviews .content .swiper .swiper-button-next:hover {
+  background-color: rgb(230, 221, 221);
+  transform: rotate(180deg);
 }
 .container .works {
   grid-area: Works;
@@ -361,35 +434,73 @@ body {
 }
 .container .aptmnt .content {
   width: 100%;
+  border-radius: 10px;
 }
 .container .aptmnt .content form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.5rem 3rem;
+}
+.container .aptmnt .content form .row1 {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
-.container .aptmnt .content form input,
-.container .aptmnt .content form textarea {
-  width: 100%;
+.container .aptmnt .content form .row1 input {
+  width: 49%;
   height: 3rem;
+  background-color: white;
   margin: 0.5rem 0;
   border: none;
   outline: none;
   border-radius: 5px;
-  padding: 0 1rem;
+  padding: 1rem;
   resize: none;
 }
-.container .aptmnt .content form #formMsg {
-  height: 5rem;
+.container .aptmnt .content form .row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .aptmnt .content form .row2 #email,
+.container .aptmnt .content form .row2 #country {
+  height: 3rem;
+  background-color: white;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
   padding: 1rem;
+  resize: none;
+}
+.container .aptmnt .content form .row2 #email {
+  width: 64%;
+}
+.container .aptmnt .content form .row2 #country {
+  width: 34%;
+}
+.container .aptmnt .content form textarea {
+  width: 100%;
+  height: 3rem;
+  background-color: white;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem;
+  resize: none;
+}
+.container .aptmnt .content form textarea {
+  height: 6rem;
 }
 .container .aptmnt .content form .sbt-btn {
   width: 8rem;
   height: 2.5rem;
-  margin: 2rem 0;
+  margin-top: 1rem;
   border-radius: 10px;
   background-color: white;
-  color: black;
+  color: rgb(82, 82, 82);
   font-size: medium;
   font-weight: bold;
   outline: none;
@@ -486,6 +597,15 @@ body {
     grid-area: Photo;
     overflow: hidden;
   }
+  .container .reviews .content .swiper .swiper-button-prev:hover {
+    transform: rotate(0);
+  }
+  .container .reviews .content .swiper .swiper-button-next:hover {
+    transform: rotate(0);
+  }
+  .container .works {
+    background: linear-gradient(to top, rgb(51, 49, 49), black);
+  }
   .container .works .swiper .swiper-wrapper .swiper-slide .card {
     scale: 0.75;
   }
@@ -498,6 +618,12 @@ body {
   }
   .container .aptmnt .header {
     margin: 1rem 0;
+  }
+  .container .aptmnt .content form {
+    padding: 1.5rem 1rem;
+  }
+  .container .aptmnt .content form .sbt-btn {
+    scale: 0.8;
   }
   .container .cnt-info {
     padding: 2rem 3rem;
@@ -515,8 +641,8 @@ body {
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 100%;
-    grid-template-rows: 4rem 25rem 15rem 20rem 35rem 27.5rem 30rem 8rem;
-    grid-template-areas: "Head" "Photo" "Title" "Services" "Works" "Aptmnt" "Contact" "Footer";
+    grid-template-rows: 4rem 25rem 15rem 35rem 35rem 27.5rem 30rem 8rem;
+    grid-template-areas: "Head" "Photo" "Title" "Reviews" "Works" "Aptmnt" "Contact" "Footer";
   }
   .container nav {
     justify-content: flex-start;
@@ -603,6 +729,12 @@ body {
     top: 45%;
     left: 1rem;
   }
+  .container .reviews .content .swiper .swiper-button-prev:hover {
+    transform: rotate(0deg);
+  }
+  .container .reviews .content .swiper .swiper-button-next:hover {
+    transform: rotate(0deg);
+  }
   .container .works {
     background: linear-gradient(to top, rgb(51, 49, 49), black);
   }
@@ -618,6 +750,12 @@ body {
   }
   .container .aptmnt .header {
     margin: 1rem 0;
+  }
+  .container .aptmnt .content form {
+    padding: 1.5rem 1rem;
+  }
+  .container .aptmnt .content form .sbt-btn {
+    scale: 0.8;
   }
   .container .cnt-info {
     padding: 2rem 3rem;

@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,19 +38,19 @@
             </div>
 
             <ul class="nav-items">
-                <a href="#home-sec">
+                <a class="navLi" href="#home-sec">
                     <li><i class="fa-solid fa-house"></i>Home</li>
                 </a>
-                <a href="#works-sec">
-                    <li><i class="fa-solid fa-code-branch"></i>Works</li>
-                </a>
-                <a href="#reviews-sec">
+                <a class="navLi" href="#reviews-sec">
                     <li><i class="fa-solid fa-bell-concierge"></i>Reviews</li>
                 </a>
-                <a href="#aptmnt-sec">
+                <a class="navLi" href="#works-sec">
+                    <li><i class="fa-solid fa-code-branch"></i>Works</li>
+                </a>
+                <a class="navLi" href="#aptmnt-sec">
                     <li><i class="fa-solid fa-pen"></i>Appointment</li>
                 </a>
-                <a href="#contact-sec">
+                <a class="navLi" href="#contact-sec">
                     <li><i class="fa-solid fa-phone"></i>Contact</li>
                 </a>
             </ul>
@@ -91,14 +93,82 @@
                 </div>
             </div>
         </div>
-        <!-- Service Section -->
+        <!-- Review Section -->
         <div class="reviews" id="reviews-sec">
+            <h3>Client Reviews</h3>
+            <div class="content">
+
+                <div class="swiper swiper1">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>Kevin Peterson</h3>
+                                <h6>CEO Kev Enterprices</h6>
+
+                                <div class="review">
+                                    <div class="fakediv"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>Savannah Bond</h3>
+                                <h6>Social Media Influencer</h6>
+
+                                <div class="review">
+                                    <div class="msgIcon"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>David James</h3>
+                                <h6>Social Media Influencer</h6>
+
+                                <div class="review">
+                                    <div class="msgIcon"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
 
         </div>
         <!-- Works Section -->
         <div class="works" id="works-sec">
             <h3>Major Works</h3>
-            <div class="swiper">
+            <div class="swiper swiper2">
                 <div class="swiper-wrapper">
 
                     <!-- Slides -->
@@ -250,11 +320,17 @@
                 <h3>Appointment</h3>
             </div>
             <div class="content">
-                <form action="">
-                    <input type="text" name="Name" id="name" placeholder="Enter Your Name">
-                    <input type="email" name="Email" id="email" placeholder="Enter Your Email Address">
+                <form id="submit-form" action="">
+                    <div class="row1">
+                        <input type="text" name="Name" placeholder="First Name">
+                        <input type="text" name="Name" placeholder="Last Name">
+                    </div>
+                    <div class="row2">
+                        <input type="email" name="Email" id="email" placeholder="Email Address">
+                        <input type="text" name="Country" id="country" placeholder="Place">
+                    </div>
                     <textarea name="Message" id="formMsg" cols="1" rows="5"
-                        placeholder="Explain what you are looking for"></textarea>
+                        placeholder="Explain what are you looking for"></textarea>
 
                     <button class="sbt-btn" type="submit">Submit</button>
                 </form>
@@ -282,17 +358,64 @@
         <footer>
             <h5>Follow me on</h5>
             <div class="slinks">
-                <a href=""><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Snehesh-Thattil"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sneheshthattil/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/sneheshthattil"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/snehesh.insta"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@sneheshthattil9089"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </footer>
 
+        <!-- Javascripts -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            const swiper = new Swiper('.swiper', {
+            const swiper1 = new Swiper('.swiper1', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+                slidesPerView: 3,
+                spaceBetween: 10,
+
+                breakpoints: {
+                    // when window width is >= 280px
+                    280: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    // when window width is >= 767px
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    // when window width is >= 968px
+                    968: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    }
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+
+                // And if we need scrollbar
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                //     draggable: true,
+                // },
+            })
+        </script>
+        <script>
+            const swiper2 = new Swiper('.swiper2', {
                 // Optional parameters
                 direction: 'horizontal',
                 loop: false,

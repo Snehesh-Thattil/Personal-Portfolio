@@ -35,7 +35,6 @@ body {
         padding: 0 5rem;
         background-color: black;
         z-index: 50;
-        position: fixed;
         width: 100%;
         height: 4rem;
 
@@ -43,6 +42,8 @@ body {
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        transition: position .25s;
+        // position: fixed;
 
         .toggler {
             display: none;
@@ -299,7 +300,95 @@ body {
 
     .reviews {
         grid-area: Reviews;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
         background: linear-gradient(to top, rgb(51, 49, 49), black);
+
+        h3 {
+            color: white;
+        }
+
+        .content {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        .msgBox {
+                            width: 15rem;
+                            height: 17.5rem;
+                            background-color: white;
+                            border-radius: 10px;
+                            padding: 20px;
+
+                            h3 {
+                                color: black;
+                            }
+
+                            h6 {
+                                margin-bottom: 10px;
+                                transform: translateX(30px);
+                            }
+
+                            .review {
+                                color: white;
+                                background-color: rgb(46, 43, 43);
+                                padding: 10px;
+                                border-radius: 5px;
+                                position: relative;
+
+                                .fakediv {
+                                    position: absolute;
+                                    width: 1.25rem;
+                                    height: 1.25rem;
+                                    border-radius: 2px;
+                                    background-color: rgb(46, 43, 43);
+                                    transform: rotate(45deg);
+                                    top: -0.5rem;
+                                    right: 1.5rem;
+                                }
+
+                                p {
+                                    font-family: 'sans serif';
+                                    font-weight: normal;
+                                    text-align: justify;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .swiper-pagination-bullet {
+                    background-color: white;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    scale: .4;
+                    width: 3rem;
+                    height: 3rem;
+                    padding: 50px;
+                    background-color: white;
+                    color: black;
+                    border-radius: 50%;
+                    transition: .25s ease-in-out;
+
+                    &:hover {
+                        background-color: rgb(230, 221, 221);
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
     }
 
     .works {
@@ -430,38 +519,81 @@ body {
 
         .content {
             width: 100%;
+            border-radius: 10px;
 
             form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 100%;
+                padding: 1.5rem 3rem;
 
-                input,
+                .row1 {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    input {
+                        width: 49%;
+                        height: 3rem;
+                        background-color: white;
+                        margin: .5rem 0;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        resize: none;
+                    }
+                }
+
+                .row2 {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    #email,
+                    #country {
+                        height: 3rem;
+                        background-color: white;
+                        margin: .5rem 0;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        resize: none;
+                    }
+
+                    #email {
+                        width: 64%;
+                    }
+
+                    #country {
+                        width: 34%;
+                    }
+                }
+
                 textarea {
                     width: 100%;
                     height: 3rem;
+                    background-color: white;
                     margin: .5rem 0;
                     border: none;
                     outline: none;
                     border-radius: 5px;
-                    padding: 0 1rem;
+                    padding: 1rem;
                     resize: none;
                 }
 
-                #formMsg {
-                    height: 5rem;
-                    padding: 1rem;
+                textarea {
+                    height: 6rem;
                 }
 
                 .sbt-btn {
                     width: 8rem;
                     height: 2.5rem;
-                    margin: 2rem 0;
+                    margin-top: 1rem;
                     border-radius: 10px;
                     background-color: white;
-                    // background-color: rgb(12, 12, 12);
-                    color: black;
+                    color: rgb(82, 82, 82);
                     font-size: medium;
                     font-weight: bold;
                     outline: none;
@@ -472,7 +604,6 @@ body {
                         cursor: pointer;
                         background-color: black;
                         color: white;
-                        // background-color: black;
                         letter-spacing: 2px;
                     }
                 }
@@ -595,7 +726,27 @@ body {
             overflow: hidden;
         }
 
+        .reviews {
+            .content {
+                .swiper {
+                    .swiper-button-prev {
+                        &:hover {
+                            transform: rotate(0);
+                        }
+                    }
+
+                    .swiper-button-next {
+                        &:hover {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
+        }
+
         .works {
+            background: linear-gradient(to top, rgb(51, 49, 49), black);
+
             .swiper {
                 .swiper-wrapper {
                     .swiper-slide {
@@ -619,6 +770,16 @@ body {
 
             .header {
                 margin: 1rem 0;
+            }
+
+            .content {
+                form {
+                    padding: 1.5rem 1rem;
+
+                    .sbt-btn {
+                        scale: .8;
+                    }
+                }
             }
         }
 
@@ -650,12 +811,12 @@ body {
 @media(max-width:768px) {
     .container {
         grid-template-columns: 100%;
-        grid-template-rows: 4rem 25rem 15rem 20rem 35rem 27.5rem 30rem 8rem;
+        grid-template-rows: 4rem 25rem 15rem 35rem 35rem 27.5rem 30rem 8rem;
         grid-template-areas:
             "Head"
             "Photo"
             "Title"
-            "Services"
+            "Reviews"
             "Works"
             "Aptmnt"
             "Contact"
@@ -774,6 +935,25 @@ body {
             }
         }
 
+        .reviews {
+            .content {
+                .swiper {
+
+                    .swiper-button-prev {
+                        &:hover {
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    .swiper-button-next {
+                        &:hover {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+        }
+
         .works {
             background: linear-gradient(to top, rgb(51, 49, 49), black);
 
@@ -800,6 +980,16 @@ body {
 
             .header {
                 margin: 1rem 0;
+            }
+
+            .content {
+                form {
+                    padding: 1.5rem 1rem;
+
+                    .sbt-btn {
+                        scale: .8;
+                    }
+                }
             }
         }
 
