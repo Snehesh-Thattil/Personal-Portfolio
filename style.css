@@ -226,15 +226,15 @@ body {
   scale: 1.5;
 }
 .container .photo .content .bootstrap {
-  top: -2.7rem;
-  right: -2.5rem;
+  top: -2.5rem;
+  right: -4rem;
 }
 .container .photo .content .express {
-  top: -2.3rem;
-  left: -4rem;
+  top: -2.1rem;
+  left: -5rem;
 }
 .container .photo .content .node {
-  bottom: -2rem;
+  bottom: -2.5rem;
   left: -3rem;
 }
 .container .photo .content .mongo {
@@ -247,7 +247,7 @@ body {
 }
 .container .photo .content .react {
   top: 45%;
-  left: -8rem;
+  left: -8.5rem;
 }
 .container .reviews {
   grid-area: Reviews;
@@ -264,12 +264,17 @@ body {
   width: 100%;
   height: 60%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.container .reviews .content .swiper {
+  padding: 0 50px;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-position: center;
+  background-size: cover;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox {
   width: 15rem;
@@ -280,10 +285,12 @@ body {
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h3 {
   color: black;
+  text-align: left;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h6 {
   margin-bottom: 10px;
-  transform: translateX(30px);
+  text-align: right;
+  transform: translateX(-10px);
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review {
   color: white;
@@ -324,7 +331,6 @@ body {
 .container .reviews .content .swiper .swiper-button-prev:hover,
 .container .reviews .content .swiper .swiper-button-next:hover {
   background-color: rgb(230, 221, 221);
-  transform: rotate(180deg);
 }
 .container .works {
   grid-area: Works;
@@ -559,18 +565,15 @@ body {
   color: white;
   padding-bottom: 1rem;
 }
-.container footer .slinks a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-}
-.container footer .slinks a i {
+.container footer .slinks i {
   scale: 1.5;
   width: 1rem;
   height: 1rem;
+  margin: 0 15px;
   transition: 0.25s ease-in-out;
+  cursor: pointer;
 }
-.container footer .slinks a i:hover {
+.container footer .slinks i:hover {
   scale: 2;
 }
 

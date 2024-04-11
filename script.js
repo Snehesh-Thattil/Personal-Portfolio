@@ -55,3 +55,37 @@ function formSubmit(e) {
         }
     })
 }
+
+function profileRedirect(e) {
+    let redirectTo = e.target.classList[1]
+
+    switch (redirectTo) {
+        case 'fa-github':
+            window.open('https://github.com/Snehesh-Thattil')
+            break;
+
+        case 'fa-linkedin':
+            window.open('https://www.linkedin.com/in/sneheshthattil/')
+            break;
+
+        case 'fa-stack-overflow':
+            window.open('https://stackoverflow.com/users/22690700/snehesh-thattil?tab=profile')
+            break;
+
+        case 'fa-twitter':
+            window.open('https://twitter.com/sneheshthattil')
+            break;
+
+        case 'fa-instagram':
+            window.open('https://www.instagram.com/snehesh.insta')
+            break;
+
+        case 'fa-youtube':
+            window.open('https://www.youtube.com/@sneheshthattil9089')
+            break;
+
+        default:
+            console.log(redirectTo)
+            alert('something went wrong about this profile')
+    }
+}

@@ -95,7 +95,7 @@
         </div>
         <!-- Review Section -->
         <div class="reviews" id="reviews-sec">
-            <h3>Client Reviews</h3>
+            <h3>Client Testimonial</h3>
             <div class="content">
 
                 <div class="swiper swiper1">
@@ -105,7 +105,7 @@
                         <div class="swiper-slide">
                             <div class="msgBox">
                                 <h3>Kevin Peterson</h3>
-                                <h6>CEO Kev Enterprices</h6>
+                                <h6>CEO : Kev Enterprices</h6>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -123,10 +123,10 @@
                         <div class="swiper-slide">
                             <div class="msgBox">
                                 <h3>Savannah Bond</h3>
-                                <h6>Social Media Influencer</h6>
+                                <h6>Internet Personality</h6>
 
                                 <div class="review">
-                                    <div class="msgIcon"></div>
+                                    <div class="fakediv"></div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
                                         expedita, deserunt
@@ -140,11 +140,11 @@
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>David James</h3>
-                                <h6>Social Media Influencer</h6>
+                                <h3>Naomi Foxx</h3>
+                                <h6>Interior Designer</h6>
 
                                 <div class="review">
-                                    <div class="msgIcon"></div>
+                                    <div class="fakediv"></div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
                                         expedita, deserunt
@@ -155,12 +155,63 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>Dulquer Salman</h3>
+                                <h6>Indian Actor, Producer</h6>
+
+                                <div class="review">
+                                    <div class="fakediv"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>SAR Enterprices</h3>
+                                <h6>Business Franchise</h6>
+
+                                <div class="review">
+                                    <div class="fakediv"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="msgBox">
+                                <h3>Genesis Lopez</h3>
+                                <h6>Instagram Model</h6>
+
+                                <div class="review">
+                                    <div class="fakediv"></div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo
+                                        expedita, deserunt
+                                        accusantium non cumque quam assumenda cum qui error asperiores nam quos, numquam
+                                        earum quod
+                                        alias sed, nulla soluta!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
                 </div>
             </div>
 
@@ -358,69 +409,102 @@
         <footer>
             <h5>Follow me on</h5>
             <div class="slinks">
-                <a href="https://github.com/Snehesh-Thattil"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sneheshthattil/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://twitter.com/sneheshthattil"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/snehesh.insta"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@sneheshthattil9089"><i class="fa-brands fa-youtube"></i></a>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-github"></i>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-linkedin"></i>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-instagram"></i>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-twitter"></i>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-stack-overflow"></i>
+                <i onclick="profileRedirect(event)" class="fa-brands fa-youtube"></i>
             </div>
         </footer>
 
         <!-- Javascripts -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
+        <script> // Reviews Swiper
             const swiper1 = new Swiper('.swiper1', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: false,
-                slidesPerView: 3,
-                spaceBetween: 10,
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 400,
+                    modifier: 5,
+                    slideShadows: false,
+                },
 
                 breakpoints: {
-                    // when window width is >= 280px
                     280: {
-                        slidesPerView: 1,
-                        spaceBetween: 10
+                        coverflowEffect: {
+                            stretch: 0,
+                            depth: 300,
+                            modifier: 2,
+                        },
                     },
                     // when window width is >= 767px
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 10
+                    769: {
+                        coverflowEffect: {
+                            stretch: 0,
+                            depth: 200,
+                            modifier: 2,
+                        },
                     },
                     // when window width is >= 968px
-                    968: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
+                    1025: {
+                        coverflowEffect: {
+                            stretch: 0,
+                            depth: 400,
+                            modifier: 5,
+                        },
                     }
                 },
 
-                // Navigation arrows
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
 
-                // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
                     dynamicBullets: true,
                 },
 
-                // And if we need scrollbar
-                // scrollbar: {
-                //     el: '.swiper-scrollbar',
-                //     draggable: true,
-                // },
+                mousewheel: {
+                    releaseOnEdges: true,
+                    sensitivity: 10,
+                    direction: 'horizontal',
+                    forceToAxis: true,
+                },
             })
         </script>
-        <script>
+        <script> // Works Swiper 
             const swiper2 = new Swiper('.swiper2', {
                 // Optional parameters
                 direction: 'horizontal',
                 loop: false,
                 slidesPerView: 1,
                 spaceBetween: 10,
+                mousewheel: true,
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+
+                mousewheel: {
+                    releaseOnEdges: true,
+                    direction: 'horizontal',
+                    forceToAxis: true,
+                },
 
                 breakpoints: {
                     // when window width is >= 280px
@@ -429,35 +513,16 @@
                         spaceBetween: 10
                     },
                     // when window width is >= 767px
-                    767: {
+                    769: {
                         slidesPerView: 1,
                         spaceBetween: 10
                     },
                     // when window width is >= 968px
-                    968: {
+                    1025: {
                         slidesPerView: 1,
                         spaceBetween: 10,
                     }
                 },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-
-                // And if we need scrollbar
-                // scrollbar: {
-                //     el: '.swiper-scrollbar',
-                //     draggable: true,
-                // },
             })
         </script>
         <script src="script.js"></script>
