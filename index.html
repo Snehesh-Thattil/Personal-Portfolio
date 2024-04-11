@@ -23,6 +23,10 @@
 </head>
 
 <body>
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------HTML---------------------------------------------------------->
+
     <div class="container">
         <!-- Header Section -->
         <nav>
@@ -65,37 +69,54 @@
                 <div class="layer">
                     <img src="/Resources/Snehesh Thattil circle.png" alt="Snehesh Thattil">
                     <p>Fullstack Developer</p>
-                    <button>Hire Now</button>
+                    <button onclick="hireBtnClick()">Hire Now</button>
                 </div>
+
                 <div class="icons node">
                     <i class="fa-brands fa-node"></i>
                     <p>Node.js</p>
                 </div>
+
                 <div class="icons express">
                     <i class="fa-brands fa-node-js"></i>
                     <p>Express.js</p>
                 </div>
+
                 <div class="icons react">
                     <i class="fa-brands fa-react"></i>
                     <p>React.js</p>
                 </div>
+
+                <div class="icons dsa">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <p>D S A</p>
+                </div>
+
                 <div class="icons mongo">
                     <i class="fa-solid fa-database"></i>
                     <p>MongoDB</p>
                 </div>
-                <div class="icons css">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <p>CSS</p>
+
+                <div class="icons scss">
+                    <i class="fa-brands fa-sass"></i>
+                    <p>SCSS</p>
                 </div>
+
+                <div class="icons vitest">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <p>Vitest</p>
+                </div>
+
                 <div class="icons bootstrap">
                     <i class="fa-brands fa-bootstrap"></i>
                     <p>Bootstrap</p>
                 </div>
             </div>
         </div>
-        <!-- Review Section -->
+
+        <!-- Testimonial Section -->
         <div class="reviews" id="reviews-sec">
-            <h3>Client Testimonial</h3>
+            <h3>Client Testimonials</h3>
             <div class="content">
 
                 <div class="swiper swiper1">
@@ -104,8 +125,10 @@
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>Kevin Peterson</h3>
-                                <h6>CEO : Kev Enterprices</h6>
+                                <div class="Name">
+                                    <h3>Kevin Peterson</h3>
+                                    <h6>CEO : Kev Enterprices</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -117,13 +140,19 @@
                                         alias sed, nulla soluta!
                                     </p>
                                 </div>
+                                <div class="stars">
+                                    <p>Great Work</p>
+                                    <img src="Resources/RatingPNGs/5star Rating.png" alt="5starRating">
+                                </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>Savannah Bond</h3>
-                                <h6>Internet Personality</h6>
+                                <div class="Name">
+                                    <h3>Savannah Bond</h3>
+                                    <h6>Internet Personality</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -135,13 +164,19 @@
                                         alias sed, nulla soluta!
                                     </p>
                                 </div>
+                                <div class="stars">
+                                    <p>Excellent</p>
+                                    <img src="Resources/RatingPNGs/4star Rating.png" alt="5starRating">
+                                </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>Naomi Foxx</h3>
-                                <h6>Interior Designer</h6>
+                                <div class="Name">
+                                    <h3>Genesis Lopez</h3>
+                                    <h6>Instagram Model</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -153,13 +188,19 @@
                                         alias sed, nulla soluta!
                                     </p>
                                 </div>
+                                <div class="stars">
+                                    <p>Elegant</p>
+                                    <img src="Resources/RatingPNGs/5star Rating.png" alt="5starRating">
+                                </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>Dulquer Salman</h3>
-                                <h6>Indian Actor, Producer</h6>
+                                <div class="Name">
+                                    <h3>Dulquer Salman</h3>
+                                    <h6>Indian Actor, Producer</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -171,13 +212,19 @@
                                         alias sed, nulla soluta!
                                     </p>
                                 </div>
+                                <div class="stars">
+                                    <p>Accurate</p>
+                                    <img src="Resources/RatingPNGs/4star Rating.png" alt="5starRating">
+                                </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>SAR Enterprices</h3>
-                                <h6>Business Franchise</h6>
+                                <div class="Name">
+                                    <h3>SAR Enterprices</h3>
+                                    <h6>Business Franchise</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -189,13 +236,19 @@
                                         alias sed, nulla soluta!
                                     </p>
                                 </div>
+                                <div class="stars">
+                                    <p>Professional</p>
+                                    <img src="Resources/RatingPNGs/5star Rating.png" alt="5starRating">
+                                </div>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
                             <div class="msgBox">
-                                <h3>Genesis Lopez</h3>
-                                <h6>Instagram Model</h6>
+                                <div class="Name">
+                                    <h3>Naomi Foxx</h3>
+                                    <h6>Interior Designer</h6>
+                                </div>
 
                                 <div class="review">
                                     <div class="fakediv"></div>
@@ -206,6 +259,10 @@
                                         earum quod
                                         alias sed, nulla soluta!
                                     </p>
+                                </div>
+                                <div class="stars">
+                                    <p>Loved It</p>
+                                    <img src="Resources/RatingPNGs/3star Rating.png" alt="5starRating">
                                 </div>
                             </div>
                         </div>
@@ -216,6 +273,7 @@
             </div>
 
         </div>
+
         <!-- Works Section -->
         <div class="works" id="works-sec">
             <h3>Major Works</h3>
@@ -226,7 +284,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/E Commerce.svg" alt="Ecommerce">
+                                <img src="Resources/ProjectSVGs/E Commerce.svg" alt="Ecommerce">
                             </div>
                             <div class="description">
                                 <h3>Ecommerce Site</h3>
@@ -234,7 +292,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('Ecommerce_Site')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -245,7 +303,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/Game.svg" alt="react-game">
+                                <img src="Resources/ProjectSVGs/Game.svg" alt="react-game">
                             </div>
                             <div class="description">
                                 <h3>React Game</h3>
@@ -253,7 +311,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('React_Game')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -264,7 +322,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/Travel.svg" alt="Travel">
+                                <img src="Resources/ProjectSVGs/Travel.svg" alt="Travel">
                             </div>
                             <div class="description">
                                 <h3>Travel Site</h3>
@@ -272,7 +330,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('Travel_Site')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -283,7 +341,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/Delivery.svg" alt="Food-Delivery">
+                                <img src="Resources/ProjectSVGs/Delivery.svg" alt="Food-Delivery">
                             </div>
                             <div class="description">
                                 <h3>Food Delivery Site</h3>
@@ -291,7 +349,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('FoodDelivery_Site')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -302,7 +360,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/Landing Page.svg" alt="Landing-page">
+                                <img src="Resources/ProjectSVGs/Landing Page.svg" alt="Landing-page">
                             </div>
                             <div class="description">
                                 <h3>Landing Page</h3>
@@ -310,7 +368,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('Landing_Pg')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -321,7 +379,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="Resources/SVGs/Netflix.svg" alt="netflix-clone">
+                                <img src="Resources/ProjectSVGs/Netflix.svg" alt="netflix-clone">
                             </div>
                             <div class="description">
                                 <h3>Netflix Clone</h3>
@@ -329,7 +387,7 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('Netflix_Cln')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -340,8 +398,7 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div class="img">
-                                <img src="https://www.logo.wine/a/logo/Flipkart/Flipkart-Logo.wine.svg"
-                                    alt="netflix-clone">
+                                <img src="Resources/ProjectSVGs/Flipkart.svg" alt="Flikart-clone">
                             </div>
                             <div class="description">
                                 <h3>Flipkart Clone</h3>
@@ -349,7 +406,26 @@
                                     obcaecati
                                     perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
                                 </p>
-                                <div class="github">
+                                <div onclick="viewWorkCode('Flipkart_Cln')" class="github">
+                                    <p>view code in github</p>
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="Resources/ProjectSVGs/Olx.svg" alt="Olx-clone">
+                            </div>
+                            <div class="description">
+                                <h3>Olx Clone</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto quia quis fugiat
+                                    obcaecati
+                                    perferendis, numquam corporis commodi illo, molestiae saepe doloremque veniam nulla.
+                                </p>
+                                <div onclick="viewWorkCode('Olx_Cln')" class="github">
                                     <p>view code in github</p>
                                     <i class="fa-brands fa-github"></i>
                                 </div>
@@ -365,10 +441,11 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-        <!-- Contact Section -->
+
+        <!-- Appointment Section -->
         <div class="aptmnt" id="aptmnt-sec">
             <div class="header">
-                <h3>Appointment</h3>
+                <h3 id="aptmntHeader">Appointment</h3>
             </div>
             <div class="content">
                 <form id="submit-form" action="">
@@ -387,6 +464,8 @@
                 </form>
             </div>
         </div>
+
+        <!-- Contact Section -->
         <div class="cnt-info" id="contact-sec">
             <div class="header">
                 <h3>Contact Info</h3>
@@ -418,9 +497,13 @@
             </div>
         </footer>
 
-        <!-- Javascripts -->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!---------------------------------------------------Javascripts------------------------------------------------------>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script> // Reviews Swiper
+        <script src="script.js"></script>
+
+        <script> // Testimonials Swiper
             const swiper1 = new Swiper('.swiper1', {
                 effect: "coverflow",
                 grabCursor: true,
@@ -438,32 +521,24 @@
                 breakpoints: {
                     280: {
                         coverflowEffect: {
-                            stretch: 0,
-                            depth: 300,
+                            depth: 150,
                             modifier: 2,
                         },
                     },
                     // when window width is >= 767px
                     769: {
                         coverflowEffect: {
-                            stretch: 0,
-                            depth: 200,
-                            modifier: 2,
+                            depth: 250,
+                            modifier: 4,
                         },
                     },
                     // when window width is >= 968px
                     1025: {
                         coverflowEffect: {
-                            stretch: 0,
                             depth: 400,
                             modifier: 5,
                         },
                     }
-                },
-
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
                 },
 
                 pagination: {
@@ -482,7 +557,6 @@
         </script>
         <script> // Works Swiper 
             const swiper2 = new Swiper('.swiper2', {
-                // Optional parameters
                 direction: 'horizontal',
                 loop: false,
                 slidesPerView: 1,
@@ -525,7 +599,9 @@
                 },
             })
         </script>
-        <script src="script.js"></script>
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------Finished------------------------------------------------------>
 </body>
 
 </html>

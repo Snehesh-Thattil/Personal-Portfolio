@@ -2,6 +2,7 @@ let toggler = document.querySelector('.toggler')
 let navItems = document.querySelector('.nav-items')
 let navbar = document.querySelector('nav')
 let sbtForm = document.getElementById('submit-form')
+let aptmntDiv = document.getElementById('aptmnt-sec')
 
 toggler.addEventListener('click', togglerAction)
 document.addEventListener('click', navOnEvent)
@@ -56,6 +57,64 @@ function formSubmit(e) {
     })
 }
 
+// Hire Button Action
+function hireBtnClick() {
+    window.location.href = "#aptmnt-sec"
+
+    let keyframes = [
+        { offset: 0, transform: 'rotate(0)' },
+        { offset: 0.1, transform: 'rotate(10deg)' },
+        { offset: 0.25, transform: 'translateY(50px)' },
+        { offset: 0.5, transform: 'rotate(-10deg)' },
+        { offset: 0.75, transform: 'translateY(-50px)' },
+        { offset: 0.9, transform: 'rotate(10deg)' },
+        { offset: 1, transform: 'rotete(0)' }
+    ]
+
+    let animaion = aptmntDiv.animate(keyframes, {
+        duration: 1000,
+        direction: 'normal'
+    })
+    
+    animaion.play()
+}
+
+// GitHub Redirects
+function viewWorkCode(workName) {
+
+    switch (workName) {
+        case 'Ecommerce_Site':
+            window.open('https://github.com/Snehesh-Thattil/Ecommerce-Site')
+            break;
+        case 'React_Game':
+            window.open('https://github.com/Snehesh-Thattil/React-Game')
+            break;
+        case 'Travel_Site':
+            window.open('https://github.com/Snehesh-Thattil/Travel-Site')
+            break;
+        case 'FoodDelivery_Site':
+            window.open('https://github.com/Snehesh-Thattil/FoodDelivery-Site')
+            break;
+        case 'Landing_Pg':
+            window.open('https://github.com/Snehesh-Thattil/Personal-Portfolio')
+            break;
+        case 'Netflix_Cln':
+            window.open('https://github.com/Snehesh-Thattil/Netflix-Clone')
+            break;
+        case 'Flipkart_Cln':
+            window.open('https://github.com/Snehesh-Thattil/Flipkart-Clone')
+            break;
+        case 'Olx_Cln':
+            window.open('https://github.com/Snehesh-Thattil/Olx-Clone')
+            break;
+        default:
+            console.log(workName + ': Not Found Link')
+            alert('Something went wrong | view project manually')
+            window.open('https://github.com/Snehesh-Thattil')
+    }
+}
+
+// Profile Redirects
 function profileRedirect(e) {
     let redirectTo = e.target.classList[1]
 

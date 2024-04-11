@@ -137,13 +137,10 @@ body {
   background: linear-gradient(to bottom, rgb(51, 49, 49), black);
   position: relative;
 }
-.container .photo .content {
-  position: relative;
-}
 .container .photo .content .layer {
   width: 16rem;
   height: 16rem;
-  background: linear-gradient(rgb(255, 255, 255), rgb(46, 43, 43));
+  background: linear-gradient(rgb(255, 255, 255), rgb(161, 161, 161), rgb(255, 255, 255));
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -158,8 +155,8 @@ body {
   width: 100%;
   height: 5rem;
   background: linear-gradient(to right, black, white, black);
-  animation: bgRotate 4s linear infinite;
   transition: 1s ease-in-out;
+  animation: bgRotate 3s linear infinite;
 }
 .container .photo .content .layer::after {
   content: "";
@@ -190,26 +187,27 @@ body {
 }
 .container .photo .content .layer p {
   font-weight: bolder;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 21px;
+  text-transform: capitalize;
   margin: 1rem 0;
 }
 .container .photo .content .layer button {
-  width: 8rem;
-  height: 3rem;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
   background-color: rgb(19, 19, 19);
   color: white;
-  border-radius: 2rem;
   outline: none;
   border: none;
   font-weight: bold;
-  cursor: pointer;
   transition: 0.5s ease;
 }
 .container .photo .content .layer button:hover {
+  width: 8rem;
   background-color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .container .photo .content .icons {
   display: flex;
@@ -225,29 +223,41 @@ body {
   padding: 0 10px;
   scale: 1.5;
 }
-.container .photo .content .bootstrap {
-  top: -2.5rem;
-  right: -4rem;
-}
-.container .photo .content .express {
-  top: -2.1rem;
-  left: -5rem;
+.container .photo .content .react {
+  top: 7rem;
+  right: 6rem;
 }
 .container .photo .content .node {
-  bottom: -2.5rem;
-  left: -3rem;
+  top: 7rem;
+  left: 6rem;
+}
+.container .photo .content .express {
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .photo .content .dsa {
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .photo .content .bootstrap {
+  bottom: 7rem;
+  right: 6rem;
+}
+.container .photo .content .vitest {
+  bottom: 50%;
+  right: 4rem;
+  transform: translateY(50%);
+}
+.container .photo .content .scss {
+  top: 50%;
+  left: 4rem;
+  transform: translateY(-50%);
 }
 .container .photo .content .mongo {
-  bottom: -2rem;
-  right: -5rem;
-}
-.container .photo .content .css {
-  bottom: 45%;
-  right: -6.1rem;
-}
-.container .photo .content .react {
-  top: 45%;
-  left: -8.5rem;
+  bottom: 7rem;
+  left: 6rem;
 }
 .container .reviews {
   grid-area: Reviews;
@@ -277,22 +287,29 @@ body {
   background-size: cover;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox {
-  width: 15rem;
-  height: 17.5rem;
+  width: 16rem;
+  height: 18rem;
   background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 17.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h3 {
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .Name {
+  margin-bottom: 5px;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .Name h3 {
   color: black;
   text-align: left;
 }
-.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox h6 {
-  margin-bottom: 10px;
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .Name h6 {
+  color: black;
   text-align: right;
   transform: translateX(-10px);
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review {
+  height: 12.5rem;
   color: white;
   background-color: rgb(46, 43, 43);
   padding: 10px;
@@ -301,18 +318,33 @@ body {
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review .fakediv {
   position: absolute;
+  top: -0.5rem;
+  left: 1.5rem;
+  transform: rotate(45deg);
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2px;
   background-color: rgb(46, 43, 43);
-  transform: rotate(45deg);
-  top: -0.5rem;
-  right: 1.5rem;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review p {
   font-family: "sans serif";
   font-weight: normal;
   text-align: justify;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .stars {
+  width: 100%;
+  padding: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .stars p {
+  font-weight: bold;
+}
+.container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .stars img {
+  width: 5rem;
+  height: 1rem;
+  opacity: 0.9;
 }
 .container .reviews .content .swiper .swiper-pagination-bullet {
   background-color: white;
@@ -390,6 +422,7 @@ body {
   padding: 4px;
   width: 100%;
   border-radius: 2px;
+  cursor: pointer;
 }
 .container .works .swiper .swiper-wrapper .swiper-slide .card .description .github p {
   color: white;
@@ -577,7 +610,7 @@ body {
   scale: 2;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
     grid-template-rows: 4rem 37.5rem 37.5rem 35rem 8rem;
   }
@@ -600,6 +633,45 @@ body {
     grid-area: Photo;
     overflow: hidden;
   }
+  .container .photo .content .react {
+    top: 8rem;
+    right: 1rem;
+  }
+  .container .photo .content .node {
+    top: 8rem;
+    left: 1rem;
+  }
+  .container .photo .content .express {
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .photo .content .dsa {
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .photo .content .bootstrap {
+    bottom: 8rem;
+    right: 1rem;
+  }
+  .container .photo .content .vitest {
+    bottom: 50%;
+    right: 0rem;
+    transform: translateY(50%);
+  }
+  .container .photo .content .scss {
+    top: 50%;
+    left: 0rem;
+    transform: translateY(-50%);
+  }
+  .container .photo .content .mongo {
+    bottom: 8rem;
+    left: 1rem;
+  }
+  .container .reviews .content .swiper .swiper-slide .msgBox {
+    scale: 0.8;
+  }
   .container .reviews .content .swiper .swiper-button-prev:hover {
     transform: rotate(0);
   }
@@ -607,7 +679,7 @@ body {
     transform: rotate(0);
   }
   .container .works {
-    background: linear-gradient(to top, rgb(51, 49, 49), black);
+    background: linear-gradient(to bottom, rgb(51, 49, 49), black);
   }
   .container .works .swiper .swiper-wrapper .swiper-slide .card {
     scale: 0.75;
@@ -641,7 +713,7 @@ body {
     margin: 1rem 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     grid-template-columns: 100%;
     grid-template-rows: 4rem 25rem 15rem 35rem 35rem 27.5rem 30rem 8rem;
@@ -708,29 +780,41 @@ body {
   .container .photo .content .icons p {
     display: none;
   }
-  .container .photo .content .bootstrap {
-    top: 2rem;
+  .container .photo .content .react {
+    top: 4rem;
     right: 3rem;
+  }
+  .container .photo .content .node {
+    top: 4rem;
+    left: 3rem;
   }
   .container .photo .content .express {
     top: 2rem;
-    left: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .container .photo .content .node {
+  .container .photo .content .dsa {
     bottom: 2rem;
-    left: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .container .photo .content .mongo {
-    bottom: 2rem;
+  .container .photo .content .bootstrap {
+    bottom: 4rem;
     right: 3rem;
   }
-  .container .photo .content .css {
-    bottom: 45%;
+  .container .photo .content .vitest {
+    bottom: 50%;
     right: 1rem;
+    transform: translateY(50%);
   }
-  .container .photo .content .react {
-    top: 45%;
+  .container .photo .content .scss {
+    top: 50%;
     left: 1rem;
+    transform: translateY(-50%);
+  }
+  .container .photo .content .mongo {
+    bottom: 4rem;
+    left: 3rem;
   }
   .container .reviews .content .swiper .swiper-button-prev:hover {
     transform: rotate(0deg);
