@@ -19,7 +19,7 @@ body {
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, black, rgb(51, 49, 49));
+  background: linear-gradient(to top, #89c2d9, #013a63);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 10vh 80vh 90vh 70vh 20vh;
@@ -28,7 +28,7 @@ body {
 .container nav {
   grid-area: Head;
   padding: 0 5rem;
-  background-color: black;
+  background-color: #012a4a;
   z-index: 50;
   width: 100%;
   height: 4rem;
@@ -41,7 +41,7 @@ body {
 .container nav .toggler {
   display: none;
   margin: 0 15px;
-  color: white;
+  color: #a9d6e5;
   scale: 1.25;
 }
 .container nav .toggler i {
@@ -51,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 5px;
-  outline: solid white;
+  outline: solid #a9d6e5;
   cursor: pointer;
 }
 .container nav .logo a {
@@ -65,14 +65,14 @@ body {
 }
 .container nav .logo a h3 {
   font-size: x-large;
-  color: white;
+  color: #a9d6e5;
 }
 .container nav .nav-items {
   display: flex;
 }
 .container nav .nav-items a {
   text-decoration: none;
-  color: white;
+  color: #a9d6e5;
   font-weight: bold;
   font-size: large;
   position: relative;
@@ -83,18 +83,18 @@ body {
   list-style: none;
 }
 .container nav .nav-items a li i {
-  color: white;
+  color: #a9d6e5;
   margin: 0 10px;
 }
 .container nav .nav-items a::before {
   content: "";
   width: 100%;
   height: 0.15em;
-  border-radius: 70%;
+  border-radius: 25%;
+  background: #2a6f97;
   position: absolute;
   left: 5px;
   bottom: 0;
-  background-color: white;
   transform: scale(0);
   transform-origin: center;
   transition: 0.25s linear;
@@ -103,16 +103,16 @@ body {
   transform: scale(1);
 }
 .container nav .nav-items a:hover {
-  color: wheat;
+  color: #61a5c2;
 }
 .container nav .nav-items a:hover li i {
-  color: wheat;
+  color: #61a5c2;
 }
 .container .title {
   grid-area: Title;
-  color: rgb(197, 196, 196);
-  background: linear-gradient(to top, rgb(51, 49, 49), black);
-  box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(3, 3, 3, 0.253);
+  color: rgb(211, 210, 210);
+  background: #01497c;
+  box-shadow: 4px 0 6px rgba(3, 3, 3, 0.253);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -134,13 +134,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgb(51, 49, 49), black);
+  background: #013a63;
   position: relative;
 }
 .container .photo .content .layer {
   width: 16rem;
   height: 16rem;
-  background: linear-gradient(rgb(255, 255, 255), rgb(161, 161, 161), rgb(255, 255, 255));
+  background: #a9d6e5;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -154,13 +154,13 @@ body {
   position: absolute;
   width: 100%;
   height: 5rem;
-  background: linear-gradient(to right, black, white, black);
+  background: linear-gradient(to right, #014f86, #a9d6e5, #014f86);
   transition: 1s ease-in-out;
   animation: bgRotate 3s linear infinite;
 }
 .container .photo .content .layer::after {
   content: "";
-  background-color: rgb(226, 226, 226);
+  background: #61a5c2;
   position: absolute;
   width: 15rem;
   height: 15rem;
@@ -190,12 +190,13 @@ body {
   font-size: 21px;
   text-transform: capitalize;
   margin: 1rem 0;
+  color: #013a63;
 }
 .container .photo .content .layer button {
   width: 7rem;
   height: 2.5rem;
   border-radius: 1.5rem;
-  background-color: rgb(19, 19, 19);
+  background: #2a6f97;
   color: white;
   outline: none;
   border: none;
@@ -204,7 +205,7 @@ body {
 }
 .container .photo .content .layer button:hover {
   width: 8rem;
-  background-color: black;
+  background: #014f86;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -213,8 +214,8 @@ body {
   display: flex;
   position: absolute;
   padding: 0.75rem 1rem;
-  color: rgb(24, 22, 22);
-  background-color: white;
+  color: white;
+  background: #2a6f97;
   border-radius: 7.5px;
   font-weight: bold;
   z-index: 2;
@@ -265,10 +266,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(to top, rgb(51, 49, 49), black);
+  background: #013a63;
 }
 .container .reviews h3 {
-  color: white;
+  color: #a9d6e5;
 }
 .container .reviews .content {
   width: 100%;
@@ -289,7 +290,7 @@ body {
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox {
   width: 16rem;
   height: 18rem;
-  background-color: white;
+  background: #a9d6e5;
   border-radius: 10px;
   padding: 17.5px;
   display: flex;
@@ -311,7 +312,7 @@ body {
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review {
   height: 12.5rem;
   color: white;
-  background-color: rgb(46, 43, 43);
+  background: #61a5c2;
   padding: 10px;
   border-radius: 5px;
   position: relative;
@@ -324,9 +325,10 @@ body {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 2px;
-  background-color: rgb(46, 43, 43);
+  background: #61a5c2;
 }
 .container .reviews .content .swiper .swiper-wrapper .swiper-slide .msgBox .review p {
+  color: black;
   font-family: "sans serif";
   font-weight: normal;
   text-align: justify;
@@ -370,12 +372,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(to bottom, rgb(51, 49, 49), black);
-  box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(3, 3, 3, 0.253);
+  background: #01497c;
+  box-shadow: 4px 4px 6px rgba(3, 3, 3, 0.253);
   z-index: 1;
 }
 .container .works h3 {
-  color: white;
+  color: #a9d6e5;
 }
 .container .works .swiper {
   width: 100%;
@@ -390,7 +392,7 @@ body {
   height: 25rem;
   padding: 20px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #a9d6e5;
 }
 .container .works .swiper .swiper-wrapper .swiper-slide .card .img {
   height: 40%;
@@ -417,7 +419,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background: #014f86;
   text-align: center;
   padding: 4px;
   width: 100%;
@@ -456,8 +458,8 @@ body {
 .container .aptmnt {
   grid-area: Aptmnt;
   color: white;
-  background: linear-gradient(to top, rgb(51, 49, 49), black);
-  box-shadow: 2.5px 0px 2.5px 2.5px rgba(3, 3, 3, 0.253);
+  background: #01497c;
+  box-shadow: 4px 0 6px rgba(3, 3, 3, 0.253);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -469,6 +471,7 @@ body {
   margin: 1rem 0;
 }
 .container .aptmnt .header h3 {
+  color: #a9d6e5;
   font-weight: bold;
 }
 .container .aptmnt .content {
@@ -538,7 +541,7 @@ body {
   height: 2.5rem;
   margin-top: 1rem;
   border-radius: 10px;
-  background-color: white;
+  background: #d6e7ec;
   color: rgb(82, 82, 82);
   font-size: medium;
   font-weight: bold;
@@ -548,25 +551,26 @@ body {
 }
 .container .aptmnt .content form .sbt-btn:hover {
   cursor: pointer;
-  background-color: black;
+  background: #3489b9;
   color: white;
   letter-spacing: 2px;
 }
 .container .cnt-info {
   grid-area: Contact;
+  background: #013a63;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 3rem 4rem;
-  background: linear-gradient(to bottom, rgb(51, 49, 49), black);
 }
 .container .cnt-info .header {
   margin: 1rem 0;
 }
 .container .cnt-info .header h3 {
   font-weight: bold;
+  color: #a9d6e5;
 }
 .container .cnt-info .content p {
   text-align: justify;
@@ -594,7 +598,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(22, 21, 21);
+  background: #2a6f97;
   color: white;
   padding-bottom: 1rem;
 }
@@ -678,9 +682,6 @@ body {
   .container .reviews .content .swiper .swiper-button-next:hover {
     transform: rotate(0);
   }
-  .container .works {
-    background: linear-gradient(to bottom, rgb(51, 49, 49), black);
-  }
   .container .works .swiper .swiper-wrapper .swiper-slide .card {
     scale: 0.75;
   }
@@ -716,7 +717,7 @@ body {
 @media (max-width: 767px) {
   .container {
     grid-template-columns: 100%;
-    grid-template-rows: 4rem 25rem 15rem 35rem 35rem 27.5rem 30rem 8rem;
+    grid-template-rows: 4rem 25rem 20rem 35rem 35rem 27.5rem 30rem 8rem;
     grid-template-areas: "Head" "Photo" "Title" "Reviews" "Works" "Aptmnt" "Contact" "Footer";
   }
   .container nav {
@@ -737,7 +738,7 @@ body {
     display: block;
     width: 100%;
     height: 25rem;
-    background: linear-gradient(to left, black, rgb(31, 30, 30), black);
+    background: linear-gradient(to right, #013a63, #01497c, #013a63);
     position: absolute;
     top: 3.95rem;
     left: 0;
@@ -822,9 +823,6 @@ body {
   .container .reviews .content .swiper .swiper-button-next:hover {
     transform: rotate(0deg);
   }
-  .container .works {
-    background: linear-gradient(to top, rgb(51, 49, 49), black);
-  }
   .container .works .swiper .swiper-wrapper .swiper-slide .card {
     scale: 0.75;
   }
@@ -833,6 +831,7 @@ body {
     transform: rotate(0);
   }
   .container .aptmnt {
+    background: #013a63;
     padding: 2rem 3rem;
   }
   .container .aptmnt .header {
@@ -846,6 +845,7 @@ body {
   }
   .container .cnt-info {
     padding: 2rem 3rem;
+    background: #01497c;
   }
   .container .cnt-info .content .opts {
     font-size: 13px;
